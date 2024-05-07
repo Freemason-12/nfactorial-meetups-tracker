@@ -4,12 +4,12 @@ const homeRoot = document.getElementById('home_root')
 const meetupInfoRoot = document.getElementById('meetup_info_root')
 
 function clearBase() {
-  // homeRoot.style.display = 'none'
-  // meetupInfoRoot.style.display = 'none'
-  for (let node of root.children) {
-    node.style.display = 'none'
-    node.innerHTML = ''
-  }
+  homeRoot.style.display = 'none'
+  meetupInfoRoot.style.display = 'none'
+  // for (let node of root.children) {
+  //   node.style.display = 'none'
+  //   node.innerHTML = ''
+  // }
 }
 
 function viewMoreRoute(e) {
@@ -27,6 +27,7 @@ async function homepage() {
   homeRoot.innerText = "";
   for (let i of contents) {
     const meetup = document.createElement('div')
+    meetup.classList.add('meetup')
     meetup.innerHTML = `
       <h2> ${i.name} </h2>
       <p>Starts at: <b>${i.date}</b> </p>

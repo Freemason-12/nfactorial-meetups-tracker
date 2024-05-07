@@ -1,3 +1,8 @@
+:root {
+  --accent: #e01424;
+  --accent2: #5599aa;
+}
+
 html,
 body {
   margin: 0px;
@@ -5,12 +10,14 @@ body {
 
 .navbar {
   position: sticky;
+  top: 0px;
   padding: 1rem;
   display: flex;
   font-family: sans-serif;
   align-items: center;
   gap: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .navbar h1 {
@@ -22,7 +29,34 @@ body {
   height: 2rem;
 }
 
+main {
+  background: #f8f8f8;
+  min-height: calc(100vh - 5rem);
+  padding: 1px 0rem 0rem 0rem;
+}
+
 #meetup_info_root,
 #home_root {
   margin: 1rem;
+}
+
+.meetup {
+  padding: 0rem 1rem 1rem 1rem;
+  margin: 1rem 0rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 0.4rem solid var(--accent);
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  background: white;
+}
+
+.meetup .view_more {
+  background: var(--accent2);
+  padding: 0.8rem 0.6rem;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 0.2rem;
+  color: white;
+  text-decoration: none;
 }
