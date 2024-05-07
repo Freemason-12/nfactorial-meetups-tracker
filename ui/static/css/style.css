@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0px;
+}
+
+.navbar {
+  position: sticky;
+  padding: 1rem;
+  display: flex;
+  font-family: sans-serif;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+  font-size: 1rem;
+}
+
+.navbar .logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+#meetup_info_root,
+#home_root {
+  margin: 1rem;
+}
