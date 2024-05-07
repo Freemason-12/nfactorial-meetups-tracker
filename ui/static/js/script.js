@@ -6,10 +6,6 @@ const meetupInfoRoot = document.getElementById('meetup_info_root')
 function clearBase() {
   homeRoot.style.display = 'none'
   meetupInfoRoot.style.display = 'none'
-  // for (let node of root.children) {
-  //   node.style.display = 'none'
-  //   node.innerHTML = ''
-  // }
 }
 
 function viewMoreRoute(e) {
@@ -47,13 +43,21 @@ async function meetupInfo(id) {
   const contents = await api.getMeetup(id)
   meetupInfoRoot.innerText = ''
   meetupInfoRoot.innerHTML = `
+    <div class="meetup_info">
     <h1> ${contents.name} </h1>
     <p> ${contents.description} </p>
-    <div class="metadata">
-      <div>Starts at: <b>${contents.date}</b></div>
-      <div>Address: <b>${contents.address}</b></div>
+    <table class="metadata">
+      <tr><td>Starts at:</td> <td><b>${contents.date}</b></td></tr>
+      <tr><td>Address:</td> <td><b>${contents.address}</b></td></tr>
+    </table>
+    <button class="view_more">Back</button>
     </div>
   `
+  meetupInfoRoot.querySelector(".view_more").onclick = (e) => {
+    e.preventDefault()
+    history.back()
+    route()
+  }
 }
 
 function route() {

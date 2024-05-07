@@ -38,6 +38,7 @@ main {
 #meetup_info_root,
 #home_root {
   margin: 1rem;
+  font-family: sans-serif;
 }
 
 .meetup {
@@ -51,7 +52,13 @@ main {
   background: white;
 }
 
-.meetup .view_more {
+.metadata {
+  margin: 1rem 0rem;
+  opacity: 0.8;
+}
+
+.view_more {
+  border: none;
   background: var(--accent2);
   padding: 0.8rem 0.6rem;
   font-weight: bold;
@@ -59,4 +66,11 @@ main {
   border-radius: 0.2rem;
   color: white;
   text-decoration: none;
+}
+
+.meetup_info {
+  background: white;
+  border-radius: 0.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem 2rem 2rem;
 }
